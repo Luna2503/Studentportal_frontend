@@ -1,0 +1,43 @@
+<section id="Student-add" class="">
+    <div class="d-flex">
+        <div class="sidebar d-flex flex-column gap-3 p-5" style="height: 85vh; width: 250px; background-color: #198754;">
+            <a href="" style="text-decoration: none; color: whitesmoke; font-weight: 600; font-size: 20px;"
+            routerLink="/dashboard">Dashboard</a>
+            <a href="" style="text-decoration: none; color: whitesmoke; font-weight: 600; font-size: 20px;"
+            routerLink="/students">Student List</a>
+        </div>
+        <div class="d-flex justify-content-center align-items-center flex-column w-100">
+            <h3 class="">Add New Student Details</h3>
+            <form class="border rounded shadow p-5 w-50 d-flex flex-column gap-3">
+                <div class="">
+                    <input 
+                    [(ngModel)]="student.id" name="sid"
+                    type="text" placeholder="Student Id" class="form-control">
+                </div>
+                <div class="">
+                    <input
+                    [(ngModel)]="student.email" name="semail"
+                    type="text" placeholder="Student Email" class="form-control">
+                </div>
+                <div class="">
+                    <input 
+                    [(ngModel)]="student.name" name="sname"
+                    type="text" placeholder="Student Name" class="form-control">
+                </div>
+                <div class="form-floating">
+                    <select
+                    [(ngModel)]="student.status" name="sstatus"
+                    class="form-select" id="floatingSelect">
+                        <option value="1">Active</option>
+                        <option value="0">Inactive</option>
+                      </select>
+                      <label for="floatingSelect">Student Status</label>
+                </div>
+                <div class="d-flex gap-3">
+                    <button class="btn btn-warning" (click)="clearForm()">Clear</button>
+                    <button class="btn btn-success" (click)="addStudent()">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

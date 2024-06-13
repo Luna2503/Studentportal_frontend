@@ -1,0 +1,15 @@
+<section id="header" class="">
+  <nav class="navbar bg-dark p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex justify-content-between align-items-center w-100" href="#">
+        <div class="">
+          <h2 class="text-light"><i class="fa-solid fa-users-gear me-3"></i>Student Portal</h2>
+        </div>
+        <div class="">
+          <button class="btn btn-outline-secondary text-light" 
+           *ngIf="logged" (click)="logout()">Logout</button>
+        </div>
+      </a>
+    </div>
+  </nav>
+</section>
